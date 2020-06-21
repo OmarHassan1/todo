@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { TodoItems } from "./Todoitems";
+import { Additem } from "./AddItem";
 import "../style/App.css";
 export default class App extends Component {
   state = {
@@ -15,6 +16,7 @@ export default class App extends Component {
       <div className="App">
         App
         <TodoItems />
+        <Additem />
       </div>
     );
   }
