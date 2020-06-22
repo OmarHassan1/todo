@@ -15,7 +15,7 @@ export default class App extends Component {
     return (
       <div className="App">
         App
-        <TodoItems />
+        <TodoItems items={this.state.items} />
         <Additem />
       </div>
     );
