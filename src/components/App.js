@@ -10,12 +10,17 @@ export default class App extends Component {
       { id: 3, name: "omar", age: 23 },
     ],
   };
-
+  deleteItem = (id) => {
+    let items = this.state.items;
+    let i = items.findIndex((item) => item.id === id);
+    items.splice(i, 1);
+    this.setState({ items });
+  };
   render() {
     return (
       <div className="App">
         App
-        <TodoItems items={this.state.items} />
+        <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
         <Additem />
       </div>
     );
