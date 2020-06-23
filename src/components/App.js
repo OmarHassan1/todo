@@ -16,12 +16,18 @@ export default class App extends Component {
     items.splice(i, 1);
     this.setState({ items });
   };
+  additem = (item) => {
+    item.id = Math.random();
+    let items = this.state.items;
+    items.push(item);
+    this.setState({ items });
+  };
   render() {
     return (
       <div className="App">
         App
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
-        <Additem />
+        <Additem additem={this.additem} />
       </div>
     );
   }
