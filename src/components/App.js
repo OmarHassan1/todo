@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { TodoItems } from "./Todoitems";
 import { Additem } from "./AddItem";
 import "../style/App.css";
+import "../style/Main.css";
 export default class App extends Component {
   state = {
     items: [
@@ -24,8 +25,8 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div className="App">
-        App
+      <div className="App container">
+        <h1 className="text-center">Todo List</h1>
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
         <Additem additem={this.additem} />
       </div>
