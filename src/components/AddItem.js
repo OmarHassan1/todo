@@ -12,11 +12,15 @@ export class Additem extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.additem(this.state);
-    this.setState({
-      name: "",
-      age: "",
-    });
+    if (e.target.name.value === "") {
+      return false;
+    } else {
+      this.props.additem(this.state);
+      this.setState({
+        name: "",
+        age: "",
+      });
+    }
   };
   render() {
     return (
