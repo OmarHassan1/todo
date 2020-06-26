@@ -42,3 +42,30 @@ body {
 form input[type="text"] {
   width: 60%;
 }
+.ListItems span.age,
+form input[type="number"] {
+  width: 30%;
+}
+
+.ListItems span.action,
+form input[type="submit"] {
+  width: 10%;
+}
+.ListItems span.icon {
+  background: #fff;
+  color: #2ebaee;
+  cursor: pointer;
+}
+form input {
+  padding: 10px;
+  background: #ebebeb;
+  border: transparent;
+  border: 0.3px solid #ccc;
+}
+
+form input[type="submit"] {
+  background: #2ebaee;
+  border: 0.3px solid #ccc;
+  cursor: pointer;
+  color: #fff;
+}
